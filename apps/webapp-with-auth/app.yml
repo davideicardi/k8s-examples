@@ -113,5 +113,19 @@ spec:
             name: azuread-oauth2-proxy
             port: 
               number: 80
+      - path: /robots.txt
+        pathType: Exact
+        backend:
+          service:
+            name: azuread-oauth2-proxy
+            port: 
+              number: 80
+      - path: /ping # this can be used by external health checks
+        pathType: Exact
+        backend:
+          service:
+            name: azuread-oauth2-proxy
+            port: 
+              number: 80
   # nginx ingress controller should be installed
   ingressClassName: nginx
