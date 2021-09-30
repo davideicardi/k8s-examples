@@ -1,6 +1,6 @@
 # Web App with authentication
 
-Kubernetes manifests
+Step by step template that explain how to deploy a web application with authentication. Authentication is provided by [oauth2-proxy](https://oauth2-proxy.github.io/oauth2-proxy/) and Azure AD provider (other providers can be used...).
 
 ## Create Azure AD Authentication Proxy
 
