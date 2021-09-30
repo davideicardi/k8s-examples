@@ -45,6 +45,10 @@ More details here:
 - [ingress-nginx with external auth](https://kubernetes.github.io/ingress-nginx/examples/auth/oauth-external-auth/)
 
 
+## Deploy your app
+
+Modify and apply `app.yml` file according to your needs.
+
 ## Testing locally
 
 To test Ingress locally with minikube, get the ingress ip by executing `kubectl get ingress`
