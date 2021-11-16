@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Run this script to create a Service Principal that 
 # can be used to connect to the Container Registry.
 # Run this one time only and store resulted user id and password inside the CI.
@@ -9,10 +11,12 @@
 # This script requires Azure CLI version 2.25.0 or later. Check version with `az --version`.
 
 # Modify for your environment.
-# The name of your Azure Container Registry
-ACR_NAME=YOUR_REGISTRY
+read -p 'Name of your Azure Container Registry: ' ACR_NAME
+# ACR_NAME=xyz
+
 # Principal name, must be unique within your AD tenant
-SERVICE_PRINCIPAL_NAME=app1-cicd
+read -p 'Name of the service principal to create: ' SERVICE_PRINCIPAL_NAME
+# SERVICE_PRINCIPAL_NAME=abc
 
 # Obtain the full registry ID for subsequent command args
 ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query id --output tsv)
