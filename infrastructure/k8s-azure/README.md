@@ -69,3 +69,7 @@ Configure Let's Encrypt PROD and STAGING issuers:
 ```bash
 kubectl apply -f ./letsencrypt/letsencrypt-issuers.yml
 ```
+
+## Create a service account for CI/CD
+
+See [Service Account for CI/CD](../k8s-cicd-serviceaccount/README.md).
